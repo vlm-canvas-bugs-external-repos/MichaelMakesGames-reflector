@@ -123,6 +123,8 @@ export default class Renderer {
           this.viewportChangedListeners.forEach((listener) => listener())
         );
     }
+    window.__PIXI_APP__ = {};
+    Object.assign(window.__PIXI_APP__, this.app);
   }
 
   public setAppSize(width: number, height: number) {
